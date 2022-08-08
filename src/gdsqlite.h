@@ -81,8 +81,8 @@ namespace godot
 
         bool open_db();
         void close_db();
-        bool query(String p_query);
-        bool query_with_bindings(String p_query, Array param_bindings);
+        bool exec(String p_sql);
+        bool exec_args(String p_sql, Array param_bindings);
 
         bool create_table(String p_name, Dictionary p_table_dict);
         bool drop_table(String p_name);
@@ -114,6 +114,9 @@ namespace godot
         Array get_query_result();
 
         Array get_query_result_by_reference();
+
+        bool backup(String p_filename);
+        bool recovery(String p_filename);
     };
 
 }
