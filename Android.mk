@@ -21,6 +21,7 @@ LOCAL_CPP_FEATURES := rtti exceptions
 LOCAL_LDLIBS := -llog
 
 LOCAL_SRC_FILES := \
+src/backup.cpp \
 src/gdsqlite.cpp \
 src/library.cpp \
 src/vfs/gdsqlite_vfs.cpp \
